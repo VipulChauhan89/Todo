@@ -94,7 +94,7 @@ export default function TaskPopUp() {
         >
           Add task
         </button>
-        <DropDown onChange={(status) => filter(status)}/>
+        <DropDown onChange={(status:string) => filter(status)}/>
         <button
           className="rounded text-red-400 border-red-300 border pl-3 pr-3 hover:bg-red-400 hover:text-white hover:border-black duration-500"
           onClick={deleteCompleted}
@@ -182,7 +182,7 @@ export default function TaskPopUp() {
           <ul>
             {temp.map((task, index) => (
               <li key={index}>
-                <Task index={index} name={task.name} status={task.status} onDeleteTask={() => handleDeleteTask(index)} onEditTask={(newName, newStatus) => editTask(index, newName, newStatus)} />
+                <Task index={index} name={task.name} status={task.status} onDeleteTask={() => handleDeleteTask(index)} onEditTask={(newName:string, newStatus:string) => editTask(index, newName, newStatus)} />
               </li>
             ))}
           </ul>

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-export default function Task(Props) {
+export default function Task(Props:any) {
   const [isEditing, setIsEditing] = useState(false);
   const [newName, setNewName] = useState(Props.name);
   const [newStatus, setNewStatus] = useState(Props.status);

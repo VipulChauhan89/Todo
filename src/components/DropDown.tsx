@@ -9,7 +9,7 @@ const status = [
   { name: '✅ Completed' },
 ];
 
-export default function DropDown(Props) {
+export default function DropDown(Props:any) {
   const st = window.localStorage.getItem('STATUS');
   const [selected, setSelected] = useState(st ? st : "All");
 
